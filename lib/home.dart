@@ -40,7 +40,7 @@ class HomePage extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                Gap(12.h),
+                Gap(12.h),// tu peux utiliser SiseBox() , pour utiliser gap() il faut get son package
                 Image.asset(MyImage.images.pick.path),
                 Text(
                   'cart',
@@ -49,14 +49,18 @@ class HomePage extends StatelessWidget {
                     fontWeight: FontWeight.w300,
                   ),
                 ),
-                Gap(12.h),
+                Gap(12.h), 
+
+                // ListTile() ici est comme une Row()/Card mais avec Trois parties:
+                // un leading(element a gauche de la Row), un trailing(element a droite de la Row)
+                // et un body( avec titre et sous-titre)
                 ListTile(
                   leading: Container(
                     width: 62.w,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5.r),
                       image: DecorationImage(
-                        image: AssetImage(MyImage.images.flower1.path),
+                        image: AssetImage(MyImage.images.flower1.path), //basiquement on utilse un string, le chemain vers l'image. eg. AssetImage('assets/flower-1.jpeg')
                       ),
                     ),
                   ),
@@ -92,10 +96,11 @@ class HomePage extends StatelessWidget {
                 ),
                 Divider(endIndent: 12.w, indent: 12.w),
                 ListTile(
+                  // Pour afficher l'image je pref utiliser un container avec une box decoration
+                  //  C'est comme en html-css, quand on utilise une  Div avec background-image
                   leading: Container(
                     width: 62.w,
                     decoration: BoxDecoration(
-
                       borderRadius: BorderRadius.circular(5.r),
                       image: DecorationImage(
                         image: AssetImage(MyImage.images.flower3.path),
@@ -114,7 +119,8 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                 ),
-                Divider(endIndent: 12.w, indent: 12.w),
+                Divider(endIndent: 12.w, indent: 12.w), // le divider ici est comme une Div avec width de 1-2px
+                // tu peux modifier la couleur ainsi que la taille(height) et aussi le weight de la bordure
               ],
             ),
           ),
